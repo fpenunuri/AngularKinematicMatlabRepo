@@ -1,0 +1,31 @@
+Dual number implementation until the fourth order.
+
+The prod function needs the dimension along which the product is computed.
+For instance use prod(A(:),1) instead of prod(A(:))
+
+Do not use subsref or A(:,...) inside the '@dualx' folders (x=1,...,4).
+For this case use the takepart function. Also, use the setpart function
+instead of subsasgn if necessary.
+
+Do not use ketA = A(:) inside the '@dualx' folders to build a ket vector
+from the elements of A, use ketA = ket(A) instead.
+
+Do not use numel for dualx (x=1,2,3,4) arrays, this function is not
+overloaded. Use product(size(A)) instead.
+
+Overloaded functions.
+abs, acos, acosh, asin, asinh, atan, atan2, atanh, cat, conj, cos, cosh,
+cross, ctranspose, dot, eq, erf, exp, ge, gt, horzcat, imag, inv, le,
+length, log, lt, minus, mldivide, mpower, mrdivide, mtimes, ne, permute,
+plus, power, prod, rdivide, real, reshape, sin, sinh, size, sqrt, subsasgn,
+subsref, sum, tan, tanh, times, transpose, uminus, uplus, vertcat
+
+Although care has been taken on writing the Matlab code, 
+there is not guaranteed to be free of error. The use of the dual 
+classes it is entirely at the user's risk and the author disclaims all 
+liability.
+
+F. Peñuñuri
+
+
+

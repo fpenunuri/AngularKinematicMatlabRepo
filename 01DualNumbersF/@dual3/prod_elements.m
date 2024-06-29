@@ -1,0 +1,1 @@
+%product of the elements af a dual3 array%F. Penunuri%UADYfunction f_r = prod_elements(x)        ketx = ket(x); %do not use ketx = x(:) inside the @dual3 folder    f_r = 1;    for k = 1:length(ketx)        f_r = f_r .* takepart(ketx,k);    end end%

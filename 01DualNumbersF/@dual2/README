@@ -1,0 +1,10 @@
+Do not use subsref or A(:,...) inside the '@dual2' folder. For this case use
+the takepart function. Also, use the setpart function instead of subsasgn
+if necessary.
+
+Do not use ketA = A(:) inside the '@dual2' folder to build a ket vector from
+the elements of A, use ketA = ket(A) instead.
+
+
+Do not use numel for dual2 arrays, this function is not overloaded. Use
+product(size(A)) instead.
